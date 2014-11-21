@@ -54,6 +54,10 @@ module.exports = function(grunt) {
 			_args.add('--readme', _opts.readme);
 		}
 
+		if(_opts.pages) {
+			_args.add('--pages', _opts.pages);
+		}
+
 		delete _args.add;
 
 		exec(formatter + ' ' + _args.join(' '), {maxBuffer: 5000*1024}, function(error, stout, sterr) {
